@@ -1,0 +1,75 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 21.08.2018
+  Minor features
+    - Disable-POF-effect setting added for every entity type
+	- New prototype types can be added at the "entity-list.lua" file
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 20.08.2018
+  Minor features:
+    - Added setting to disable POF-effect on belts and pipes
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 20.08.2018
+  Minor Features:
+    - Added "pipe-to-ground" to placedOffGrid.
+    - Transport belt and underground transport belt hitbox sizes increased to 1x1 (0.8x0.8 previously).
+    - Added "greetings" on world creating.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 17.08.2018
+  Major Features:
+    - First working version.
+  PlacedOffGrid:
+    - "assembling-machine"
+    - "furnace"
+    - "transport-belt"
+    - "underground-belt"
+    - "splitter"
+    - "container"
+    - "inserter"
+    - "solar-panel"
+    - "gate"
+    - "player-port"
+    - "straight-rail"
+    - "curved-rail"
+    - "train-stop"
+    - "rail-signal"
+    - "rail-chain-signal"
+    - "lab"
+    - "logistic-container"
+    - "rocket-silo"
+    - "rocket-silo-rocket"
+    - "roboport"
+    - "storage-tank"
+    - "pump"
+    - "market"
+    - "electric-pole"
+    - "accumulator"
+    - "beacon"
+    - "sticker"
+    - "arithmetic-combinator"
+    - "decider-combinator"
+    - "constant-combinator"
+    - "power-switch"
+    - "programmable-speaker"
+    - "electric-energy-interface"
+    - "reactor"
+    - "boiler"
+    - "generator"
+    - "heat-pipe"
+    - "simple-entity-with-force"
+    - "simple-entity-with-owner"
+    - "cliff"
+    - "loader"
+    - "offshore-pump"
+    - "pipe"
+    - "radar"
+    - "lamp"
+    - "entity-ghost"
+    - "deconstructible-tile-proxy"
+    - "item-request-proxy"
+    - "wall"
+    - "corpse"
+    - "mining-drill"
