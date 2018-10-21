@@ -17,9 +17,6 @@ function placeOffGrid(dataType)
 			table.insert(flags, "placeable-off-grid")
 			e.flags = flags
 		end
-		if e.type == "transport-belt" or "underground belt" then
-			e.collision_box = e.selection_box
-		end
 	end
 end
 
