@@ -1,7 +1,7 @@
 data:extend({
 	{
     	type = "selection-tool",
-    	name = "snapper-to-grid",
+    	name = "snap-tool",
     	icon = "__base__/graphics/icons/blueprint.png",
     	icon_size = 32,
     	stack_size = 1,
@@ -19,7 +19,7 @@ data:extend({
 	},
 	{
     	type = "recipe",
-    	name = "snapper-to-grid",
+    	name = "snap-tool",
     	enabled = true,
     	energy_required = 0.5,
     	ingredients =
