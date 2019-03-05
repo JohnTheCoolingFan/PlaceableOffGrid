@@ -26,6 +26,6 @@ data:extend({
     	{
       		{"blueprint", 1}
     	},
-    	result = "snapper-to-grid"
+    	result = "snap-tool"
   	}
 })
