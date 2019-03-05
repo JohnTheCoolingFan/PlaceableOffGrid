@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 06.03.2019
+  Minor Features:
+    - Renamed "Snapper to grid" to "Snap tool"
+    - Added recipe for Snap tool if you lose one during the game
+---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 21.10.2018
   Minor Features:
