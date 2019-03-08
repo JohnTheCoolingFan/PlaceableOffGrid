@@ -13,7 +13,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 	-- Script itself
 	for i, entity in pairs(entities) do
 		local position = entity.position
-		player.print(position.x.." "..position.y)
+		--player.print(position.x.." "..position.y)
 		entity.teleport({x = math_round(position.x), y = math_round(position.y)})
 		entity_num = entity_num + 1
 	end
