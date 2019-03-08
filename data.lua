@@ -2,7 +2,7 @@ data:extend({
 	{
     	type = "selection-tool",
     	name = "snap-tool",
-    	icon = "__base__/graphics/icons/blueprint.png",
+    	icon = "__PlaceableOffGrid__/graphics/icons/snap-tool.png",
     	icon_size = 32,
     	stack_size = 1,
     	subgroup = "tool",
@@ -27,5 +27,36 @@ data:extend({
       		{"blueprint", 1}
     	},
     	result = "snap-tool"
-  	}
+  	},
+	{
+		type = "shortcut",
+		name = "snap-tool",
+		action = "create-blueprint-item",
+		icon =
+		{
+			filename = "__PlaceableOffGrid__/graphics/icons/snap-tool.png",
+			priority = "extra-high-no-scale",
+			size = 32,
+			scale = 1,
+			flags = {"icon"}
+		},
+		small_icon =
+		{
+			filename = "__PlaceableOffGrid__/graphics/icons/snap-tool.png",
+			priority = "extra-high-no-scale",
+			size = 32,
+			scale = 0.75,
+			flags = {"icon"}
+		},
+		disabled_small_icon =
+		{
+			filename = "__PlaceableOffGrid__/graphics/icons/snap-tool.png",
+			priority = "extra-high-no-scale",
+			size = 32,
+			scale = 0.75,
+			flags = {"icon"}
+		},
+		item_to_create = "snap-tool",
+		toggleable = true,
+	}
 })

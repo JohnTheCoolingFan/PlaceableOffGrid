@@ -1,25 +1,19 @@
-script.on_event(defines.events.on_player_created, function(event)
-	local player = game.players[event.player_index]
-	local phraseNumber = math.random(5)
-	player.print({"", "[PlaceableOffGrid]", {"phrases.greeting-"..phraseNumber}})
-	player.insert({name = "snap-tool"})
-end)
-
 local function math_round(num) return math.floor(num+0.5) end
 
 script.on_event(defines.events.on_player_selected_area, function(event)
 	local player = game.players[event.player_index]
 
-	--check if this is snap-tool
+	-- Check if this is snap-tool
 	if event.item ~= "snap-tool" then return end
 
-	--setting up some variables
+	-- Setting up some variables
 	local entities = event.entities
-	local tiles = event.tiles
 	local entity_num = 0
 
+	-- Script itself
 	for i, entity in pairs(entities) do
 		local position = entity.position
+		player.print(position.x.." "..position.y)
 		entity.teleport({x = math_round(position.x), y = math_round(position.y)})
 		entity_num = entity_num + 1
 	end
