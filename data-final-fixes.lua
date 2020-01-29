@@ -10,7 +10,7 @@ function has_value(tab, val)
     return false
 end
 
-function placeOffGrid(dataType)
+function place_off_grid(dataType)
 	for i, e in pairs(data.raw[dataType]) do
         if not e.flags then
             e.flags = {}
@@ -25,6 +25,6 @@ end
 
 for i, e in pairs(entity_list) do
 	if not settings.startup["pof-disable-"..e].value then
-		placeOffGrid(e)
+		place_off_grid(e)
 	end
 end
