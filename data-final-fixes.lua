@@ -12,6 +12,9 @@ end
 
 function placeOffGrid(dataType)
 	for i, e in pairs(data.raw[dataType]) do
+        if not e.flags then
+            e.flags = {}
+        end
 		local flags = e.flags
 		if not has_value(flags, "placeable-off-grid") then
 			table.insert(flags, "placeable-off-grid")
