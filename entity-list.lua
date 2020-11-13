@@ -42,14 +42,14 @@ local list = {
 	"wall",
 	"corpse",
 	"mining-drill",
-	"transport-belt",
-	"underground-belt",
-	"splitter",
+	--"transport-belt",
+	--"underground-belt",
+	--"splitter",
 	"heat-pipe",
 	"pipe",
 	"pipe-to-ground",
 	"straight-rail",
-	"loader"
+	--"loader"
 }
 
 return list
