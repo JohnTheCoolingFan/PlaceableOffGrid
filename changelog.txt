@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+Date: 04.12.2020
+  Major Features:
+    - Update for Factorio 1.1
+      Belts have been removed from the affected entities list because they can't have
+      "placeable-off-grid" flag anymore :(
+---------------------------------------------------------------------------------------------------
 Version: 0.1.10
 Date: 06.09.2020
   Minor Features:
