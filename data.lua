@@ -57,6 +57,5 @@ data:extend({
 			flags = {"icon"}
 		},
 		item_to_spawn = "snap-tool",
-		toggleable = true,
 	}
 })
