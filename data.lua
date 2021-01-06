@@ -17,6 +17,7 @@ data:extend({
     	can_be_mod_opened = true,
     	show_in_library = true
 	},
+	--[[ No need for recipe in current Factorio design
 	{
     	type = "recipe",
     	name = "snap-tool",
@@ -27,7 +28,7 @@ data:extend({
       		{"blueprint", 1}
     	},
     	result = "snap-tool"
-  	},
+  	},]]
 	{
 		type = "shortcut",
 		name = "snap-tool",
