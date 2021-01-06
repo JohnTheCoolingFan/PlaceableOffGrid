@@ -20,5 +20,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 		end
 	end
 
-	player.print({"phrases.snap-message", entity_num})
+	if entity_num > 0 then
+		player.print({"phrases.snap-message", entity_num})
+	end
 end)
