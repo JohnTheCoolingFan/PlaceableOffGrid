@@ -6,6 +6,8 @@ Date: 06.01.2021
     - Added force check t othe script so you can't snap enemies
   Minor Features:
     - Removed crafting recipe for snap tool, as it doesn't fit anymore in Factorio's design.
+  Locale:
+    - Some fixes for missing entries in locale
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.11
 Date: 04.12.2020
