@@ -31,7 +31,7 @@ data:extend({
 	{
 		type = "shortcut",
 		name = "snap-tool",
-		action = "create-blueprint-item",
+		action = "spawn-item",
 		icon =
 		{
 			filename = "__PlaceableOffGrid__/graphics/icons/snap-tool.png",
@@ -56,7 +56,7 @@ data:extend({
 			scale = 0.75,
 			flags = {"icon"}
 		},
-		item_to_create = "snap-tool",
+		item_to_spawn = "snap-tool",
 		toggleable = true,
 	}
 })
