@@ -1,3 +1,5 @@
+-- TODO: better shortcut icon, mipmaps
+
 data:extend({
 	{
     	type = "selection-tool",
