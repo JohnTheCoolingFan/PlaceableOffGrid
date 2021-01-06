@@ -9,7 +9,7 @@ data:extend({
     	stack_size = 1,
     	subgroup = "tool",
     	order = "c[automated-construction]-e[snapper-to-grid]",
-    	flags = {},
+    	flags = {'spawnable'},
     	selection_color = {r = 0.9, g = 0.9, b = 0.9, a = 0.2},
     	alt_selection_color = {r = 0.9, g = 0.9, b = 0.9, a = 0.2},
     	selection_mode = {"buildable-type", 'same-force'},
