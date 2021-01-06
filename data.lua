@@ -12,12 +12,11 @@ data:extend({
     	flags = {},
     	selection_color = {r = 0.9, g = 0.9, b = 0.9, a = 0.2},
     	alt_selection_color = {r = 0.9, g = 0.9, b = 0.9, a = 0.2},
-    	selection_mode = {"buildable-type"},
-    	alt_selection_mode = {"buildable-type"},
+    	selection_mode = {"buildable-type", 'same-force'},
+    	alt_selection_mode = {"buildable-type", 'same-force'},
     	selection_cursor_box_type = "entity",
     	alt_selection_cursor_box_type = "copy",
     	can_be_mod_opened = true,
-    	show_in_library = true
 	},
 	--[[ No need for recipe in current Factorio design
 	{
@@ -35,6 +34,7 @@ data:extend({
 		type = "shortcut",
 		name = "snap-tool",
 		action = "spawn-item",
+		item_to_spawn = "snap-tool",
 		icon =
 		{
 			filename = "__PlaceableOffGrid__/graphics/icons/snap-tool.png",
@@ -59,6 +59,5 @@ data:extend({
 			scale = 0.75,
 			flags = {"gui-icon"}
 		},
-		item_to_spawn = "snap-tool",
 	}
 })
