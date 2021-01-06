@@ -38,7 +38,7 @@ data:extend({
 			priority = "extra-high-no-scale",
 			size = 32,
 			scale = 1,
-			flags = {"icon"}
+			flags = {"gui-icon"}
 		},
 		small_icon =
 		{
@@ -46,7 +46,7 @@ data:extend({
 			priority = "extra-high-no-scale",
 			size = 32,
 			scale = 0.75,
-			flags = {"icon"}
+			flags = {"gui-icon"}
 		},
 		disabled_small_icon =
 		{
@@ -54,7 +54,7 @@ data:extend({
 			priority = "extra-high-no-scale",
 			size = 32,
 			scale = 0.75,
-			flags = {"icon"}
+			flags = {"gui-icon"}
 		},
 		item_to_spawn = "snap-tool",
 	}
