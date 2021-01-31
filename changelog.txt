@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.13
+Date: 01.02.2021
+  Minor Features:
+    - Replaced mod thumbnail with a meme because previous icon was called ableist.
+      Feel free to discuss new icon on mod portal or github.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.12
 Date: 06.01.2021
   Fixes:
