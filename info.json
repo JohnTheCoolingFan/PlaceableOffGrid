@@ -6,6 +6,6 @@
 "contact": "https://discord.gg/KPnETvMDYk",
 "homepage": "https://discord.gg/KPnETvMDYk",
 "dependencies": ["base >= 1.1.0"],
-"description": "Allows you to place-off-grid every entity in the game. Warning: can trigger your OCD",
+"description": "Allows you to place-off-grid every entity in the game",
 "factorio_version": "1.1"
 }
