@@ -10,7 +10,7 @@ local function has_value(tab, val)
     return false
 end
 
-local function place_off_grid(dataType)
+local function add_pog_flag(dataType)
 	for _, entity_prototype in pairs(data.raw[dataType]) do
         if not entity_prototype.flags then
             entity_prototype.flags = {"placeable-off-grid"}
@@ -22,6 +22,6 @@ end
 
 for _, entity_type in pairs(entity_list) do
 	if not settings.startup["pof-disable-"..entity_type].value then
-		place_off_grid(entity_type)
+		add_pog_flag(entity_type)
 	end
 end
