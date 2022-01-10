@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.14
+Date: 2022-01-10
+  Minor changes:
+    - Improved how snapping to grid works
+      Now it is more precise and will snap entity into position that is closest
+---------------------------------------------------------------------------------------------------
 Version: 0.1.13
 Date: 01.02.2021
   Minor Features:
