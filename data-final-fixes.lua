@@ -23,7 +23,7 @@ local function place_off_grid(dataType)
 	end
 end
 
-for i, e in pairs(entity_list) do
+for _, e in pairs(entity_list) do
 	if not settings.startup["pof-disable-"..e].value then
 		place_off_grid(e)
 	end
