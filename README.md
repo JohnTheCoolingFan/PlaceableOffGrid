@@ -84,7 +84,7 @@ Generators are connected
 
 # Support
 
-If you would like to support me, you can donate me using BTC, BCH or ETH (images are too large, so it's just a link):
+If you would like to support my unholy work, you can donate me using BTC, BCH or ETH (images are too large, so it's just a link):
 [Bitcoin Cash (BCH)](https://imgur.com/tBASbzf.png)
 [Bitcoint (BTC)](https://imgur.com/NwaMwIX.png)
 [Ethereum (ETH)](https://imgur.com/IkvweGC.png)
