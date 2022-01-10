@@ -1,7 +1,7 @@
 local entity_list = require("entity-list")
 
-function has_value(tab, val)
-	for index, value in ipairs(tab) do
+local function has_value(tab, val)
+	for _, value in ipairs(tab) do
         if value == val then
             return true
         end
@@ -10,8 +10,8 @@ function has_value(tab, val)
     return false
 end
 
-function place_off_grid(dataType)
-	for i, e in pairs(data.raw[dataType]) do
+local function place_off_grid(dataType)
+	for _, e in pairs(data.raw[dataType]) do
         if not e.flags then
             e.flags = {}
         end
