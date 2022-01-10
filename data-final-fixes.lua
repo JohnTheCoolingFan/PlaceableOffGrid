@@ -13,13 +13,10 @@ end
 local function place_off_grid(dataType)
 	for _, entity_prototype in pairs(data.raw[dataType]) do
         if not entity_prototype.flags then
-            entity_prototype.flags = {}
+            entity_prototype.flags = {"placeable-off-grid"}
+        elseif not has_value(entity_prototype.flags, "placeable-off-grid") then
+            table.insert(entity_prototype.flags, "placeable-off-grid")
         end
-		local flags = entity_prototype.flags
-		if not has_value(flags, "placeable-off-grid") then
-			table.insert(flags, "placeable-off-grid")
-			entity_prototype.flags = flags
-		end
 	end
 end
 
