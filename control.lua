@@ -32,15 +32,24 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 				x = math_round(position.x + shifts[1]) - shifts[1],
 				y = math_round(position.y - shifts[2]) + shifts[2]
 			}
-			if surface.can_place_entity({ name = entity.name, position = teleport_dest, direction = entity.direction, force =
-					entity.force }) then
-				entity.teleport(teleport_dest)
-				entity_num = entity_num + 1
-			else
-				teleport_dest = surface.find_non_colliding_position(entity.name, teleport_dest, 32, 0.01, true)
-				if teleport_dest ~= nil then
+			if entity.position.x ~= teleport_dest.x and entity.position.y ~= teleport_dest.y then
+				if surface.can_place_entity(
+						{
+							name = entity.name,
+							position = teleport_dest,
+							direction = entity.direction,
+							build_check_type = defines.build_check_type.script,
+							force = entity.force
+						}
+					) then
 					entity.teleport(teleport_dest)
 					entity_num = entity_num + 1
+				else
+					teleport_dest = surface.find_non_colliding_position(entity.name, teleport_dest, 32, 0.01, true)
+					if teleport_dest ~= nil then
+						entity.teleport(teleport_dest)
+						entity_num = entity_num + 1
+					end
 				end
 			end
 		end
