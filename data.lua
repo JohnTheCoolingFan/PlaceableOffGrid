@@ -2,21 +2,21 @@
 
 data:extend({
 	{
-    	type = "selection-tool",
-    	name = "snap-tool",
-    	icon = "__PlaceableOffGrid__/graphics/icons/snap-tool.png",
-    	icon_size = 32,
-    	stack_size = 1,
-    	subgroup = "tool",
-    	order = "c[automated-construction]-e[snapper-to-grid]",
-    	flags = {'spawnable'},
-    	selection_color = {r = 0.9, g = 0.9, b = 0.9, a = 0.2},
-    	alt_selection_color = {r = 0.9, g = 0.9, b = 0.9, a = 0.2},
-    	selection_mode = {"buildable-type", 'same-force'},
-    	alt_selection_mode = {"buildable-type", 'same-force'},
-    	selection_cursor_box_type = "entity",
-    	alt_selection_cursor_box_type = "copy",
-    	can_be_mod_opened = true,
+		type = "selection-tool",
+		name = "snap-tool",
+		icon = "__PlaceableOffGrid__/graphics/icons/snap-tool.png",
+		icon_size = 32,
+		stack_size = 1,
+		subgroup = "tool",
+		order = "c[automated-construction]-e[snapper-to-grid]",
+		flags = { 'spawnable' },
+		selection_color = { r = 0.9, g = 0.9, b = 0.9, a = 0.2 },
+		alt_selection_color = { r = 0.9, g = 0.9, b = 0.9, a = 0.2 },
+		selection_mode = { "buildable-type", 'same-force' },
+		alt_selection_mode = { "buildable-type", 'same-force' },
+		selection_cursor_box_type = "entity",
+		alt_selection_cursor_box_type = "copy",
+		can_be_mod_opened = true,
 	},
 	--[[ No need for recipe in current Factorio design
 	{
@@ -41,7 +41,7 @@ data:extend({
 			priority = "extra-high-no-scale",
 			size = 32,
 			scale = 1,
-			flags = {"gui-icon"}
+			flags = { "gui-icon" }
 		},
 		small_icon =
 		{
@@ -49,7 +49,7 @@ data:extend({
 			priority = "extra-high-no-scale",
 			size = 32,
 			scale = 0.75,
-			flags = {"gui-icon"}
+			flags = { "gui-icon" }
 		},
 		disabled_small_icon =
 		{
@@ -57,7 +57,7 @@ data:extend({
 			priority = "extra-high-no-scale",
 			size = 32,
 			scale = 0.75,
-			flags = {"gui-icon"}
+			flags = { "gui-icon" }
 		},
 	}
 })
