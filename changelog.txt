@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2024-10-30
+  Major Changes:
+    - Factorio 2.0 update
+    - Re-generated the entity list
+    - Improved snapping tool algorythm
+---------------------------------------------------------------------------------------------------
 Version: 0.1.14
 Date: 2022-01-10
   Minor changes:
