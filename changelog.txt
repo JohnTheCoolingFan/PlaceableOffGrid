@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2025-01-02
+  Major Changes:
+    - Changed some prototype categories to be disabled by default because they can cause the
+      `inconsistent transport lines` assertion error. Those entities are:
+      'lane-splitter'
+      'linked-belt'
+      'loader-1x1'
+      'loader'
+      'splitter'
+      'transport-belt'
+      'underground-belt'
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2024-10-30
   Major Changes:
