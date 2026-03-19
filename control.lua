@@ -78,3 +78,29 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 		player.print({ "phrases.snap-message", entity_num })
 	end
 end)
+
+
+script.on_event(defines.events.on_built_entity, function(data)
+	local surface = data.entity.surface
+	local bb = data.entity.selection_box
+	if bb == nil then
+		return
+	end
+	for _, entity in pairs(surface.find_entities(bb)) do
+		if entity ~= data.entity then
+			data.entity.destroy()
+			for _, v in pairs(data.consumed_items.get_contents()) do
+				game.players[data.player_index].insert({ name = v.name, count = v.count, quality = v.quality })
+			end
+			return
+		end
+	end
+end, {
+	{ filter = "type", type = "transport-belt" },
+	{ filter = "type", type = "underground-belt" },
+	{ filter = "type", type = "splitter" },
+	{ filter = "type", type = "linked-belt" },
+	{ filter = "type", type = "lane-splitter" },
+	{ filter = "type", type = "loader" },
+	{ filter = "type", type = "loader-1x1" },
+})
