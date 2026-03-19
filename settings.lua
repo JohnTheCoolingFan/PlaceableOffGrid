@@ -46,3 +46,18 @@ for e, _ in pairs(defines.prototypes.entity) do
 end
 
 data:extend(result)
+
+data:extend({
+	{
+		type = "bool-setting",
+		name = "snap-tool-technology",
+		setting_type = "startup",
+		default_value = true
+	},
+	{
+		type = "bool-setting",
+		name = "enable-snap-tool",
+		setting_type = "startup",
+		default_value = true
+	},
+})

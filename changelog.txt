@@ -1,12 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2026-03-20
+  Major Changes:
+    - Added a setting to disable Snap tool, if you want
+    - Added a setting that makes Snap tool locked behind research
   Fixes:
     - Fixed the "transport line groups are not consistent" error by preventing belts and belt-like
       entities from being placed in positions that would cause this error.
-    - The snap-to-grid tool should be properly fixed now.
+    - The Snap tool should be properly fixed now.
   Locale:
-    - Added pluralization to the grid snapping tool message (might be incorrect for Polish).
+    - Added pluralization to the Snap tool message (might be incorrect for Polish).
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2025-01-02
