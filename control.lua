@@ -5,8 +5,8 @@ local function math_round(num) return math.floor(num + 0.5) end
 local function get_shifts(entity)
 	local bounding_box = entity.selection_box
 	local dimensions = {
-		bounding_box.right_bottom.x - bounding_box.left_top.x,
-		bounding_box.right_bottom.y - bounding_box.left_top.y
+		math.ceil(bounding_box.right_bottom.x) - math.floor(bounding_box.left_top.x),
+		math.ceil(bounding_box.right_bottom.y) - math.floor(bounding_box.left_top.y)
 	}
 	return {
 		(dimensions[1] % 2) / 2,
@@ -44,7 +44,7 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 			local shifts = get_shifts(entity_data.entity)
 			--player.print(position.x.." "..position.y)
 			local teleport_dest = {
-				x = math_round(position.x + shifts[1]) - shifts[1],
+				x = math_round(position.x - shifts[1]) + shifts[1],
 				y = math_round(position.y - shifts[2]) + shifts[2]
 			}
 			if surface.can_place_entity(
@@ -62,8 +62,8 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 				end
 			else
 				log("Falling back to finding non colliding position")
-				teleport_dest = surface.find_non_colliding_position(entity_data.entity.name, teleport_dest, 32, 0.01,
-					true)
+				teleport_dest = surface.find_non_colliding_position(entity_data.entity.name, teleport_dest, 32, 1,
+					false)
 				if teleport_dest ~= nil then
 					entity_data.entity.teleport(teleport_dest)
 					if entity_data.position.x ~= teleport_dest.x or entity_data.position.y ~= teleport_dest.y then
@@ -79,14 +79,20 @@ script.on_event(defines.events.on_player_selected_area, function(event)
 	end
 end)
 
+local function bb_normalized(bb)
+	return {
+		left_top = { x = math.floor(bb.left_top.x * 2) / 2, y = math.floor(bb.left_top.y * 2) / 2 },
+		right_bottom = { x = math.ceil(bb.right_bottom.x * 2) / 2, y = math.ceil(bb.right_bottom.y * 2) / 2 },
+	}
+end
 
 script.on_event(defines.events.on_built_entity, function(data)
 	local surface = data.entity.surface
-	local bb = data.entity.selection_box
-	if bb == nil then
+	if data.entity.selection_box == nil then
 		return
 	end
-	for _, entity in pairs(surface.find_entities(bb)) do
+	local bb = bb_normalized(data.entity.selection_box)
+	for _, entity in pairs(surface.find_entities({ { bb.left_top.x - 25 / 256, bb.left_top.y - 25 / 256 }, { bb.right_bottom.x + 25 / 256, bb.right_bottom.y + 25 / 256 } })) do
 		if entity ~= data.entity then
 			data.entity.destroy()
 			for _, v in pairs(data.consumed_items.get_contents()) do
@@ -104,3 +110,5 @@ end, {
 	{ filter = "type", type = "loader" },
 	{ filter = "type", type = "loader-1x1" },
 })
+
+-- for debugging: copy the handler, change event to `script_raised_built`, remove code about refunding items
