@@ -1,4 +1,3 @@
-local entity_list = require("entity-list")
 local result = {}
 
 local belted_categories = {
@@ -20,7 +19,7 @@ local function has_value(val, list)
 	return false
 end
 
-for _, e in pairs(entity_list) do
+for e, _ in pairs(defines.prototypes.entity) do
 	if has_value(e, belted_categories) then
 		table.insert(result,
 			{
