@@ -30,13 +30,13 @@ Date: 2024-10-30
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.14
 Date: 2022-01-10
-  Minor changes:
+  Minor Changes:
     - Improved how snapping to grid works
       Now it is more precise and will snap entity into position that is closest
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.13
 Date: 2021-02-01
-  Minor Features:
+  Minor Changes:
     - Replaced mod thumbnail with a meme because previous icon was called ableist.
       Feel free to discuss new icon on mod portal or github.
 ---------------------------------------------------------------------------------------------------
@@ -45,26 +45,26 @@ Date: 2021-01-06
   Fixes:
     - Fixed error on load due to changes in API
     - Added force check t othe script so you can't snap enemies
-  Minor Features:
+  Minor Changes:
     - Removed crafting recipe for snap tool, as it doesn't fit anymore in Factorio's design.
   Locale:
     - Some fixes for missing entries in locale
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.11
 Date: 2020-12-04
-  Major Features:
+  Major Changes:
     - Update for Factorio 1.1
       Belts have been removed from the affected entities list because they can't have
       "placeable-off-grid" flag anymore :(
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.10
 Date: 2020-09-06
-  Minor Features:
+  Minor Changes:
     - Updated thumbnail and description
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2020-09-05
-  Minor Features:
+  Minor Changes:
     - Update for 1.0
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.8
@@ -74,46 +74,46 @@ Date: 2020-04-09
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 2020-01-29
-  Minor features:
+  Minor Changes:
     - Update for 0.18. Triggering your OCD since 0.16
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2019-03-08
-  Minor Features:
+  Minor Changes:
     - Added Snap tool shortcut
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2019-03-06
-  Minor Features:
+  Minor Changes:
     - Renamed "Snapper to grid" to "Snap tool"
     - Added recipe for Snap tool if you lose one during the game
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2018-10-21
-  Minor Features:
+  Minor Changes:
     - Added Snapper to grid whcih snaps selected entities to grid.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 2018-08-21
-  Minor features:
+  Minor Changes:
     - Disable-POF-effect setting added for every entity type
     - New prototype types can be added at the "entity-list.lua" file
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 2018-08-20
-  Minor features:
+  Minor Changes:
     - Added setting to disable POF-effect on belts and pipes
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2018-08-20
-  Minor Features:
+  Minor Changes:
     - Added "pipe-to-ground" to placedOffGrid.
     - Transport belt and underground transport belt hitbox sizes increased to 1x1 (0.8x0.8 previously).
     - Added "greetings" on world creating.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2018-08-17
-  Major Features:
+  Minor Changes:
     - First working version.
   PlacedOffGrid:
     - "assembling-machine"
