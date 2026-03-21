@@ -14,6 +14,27 @@ local function get_shifts(entity)
 	}
 end
 
+local belted_categories = {
+	'lane-splitter',
+	'linked-belt',
+	'loader-1x1',
+	'loader',
+	'splitter',
+	'transport-belt',
+	'underground-belt'
+}
+
+local function has_value(val, list)
+	for _, v in pairs(list) do
+		if v == val then
+			return true
+		end
+	end
+	return false
+end
+
+-- todo: special handling for belt-like entities that can't be teleported
+
 script.on_event(defines.events.on_player_selected_area, function(event)
 	-- Check if this is snap-tool
 	if event.item ~= "snap-tool" then return end
@@ -93,12 +114,14 @@ script.on_event(defines.events.on_built_entity, function(data)
 	end
 	local bb = bb_normalized(data.entity.selection_box)
 	for _, entity in pairs(surface.find_entities({ { bb.left_top.x - 25 / 256, bb.left_top.y - 25 / 256 }, { bb.right_bottom.x + 25 / 256, bb.right_bottom.y + 25 / 256 } })) do
-		if entity ~= data.entity then
-			data.entity.destroy()
-			for _, v in pairs(data.consumed_items.get_contents()) do
-				game.players[data.player_index].insert({ name = v.name, count = v.count, quality = v.quality })
+		if has_value(entity.type, belted_categories) then
+			if entity ~= data.entity then
+				data.entity.destroy()
+				for _, v in pairs(data.consumed_items.get_contents()) do
+					game.players[data.player_index].insert({ name = v.name, count = v.count, quality = v.quality })
+				end
+				return
 			end
-			return
 		end
 	end
 end, {
